@@ -1,0 +1,47 @@
+<!--
+ * @Description: 
+ * @Author: ljl
+ * @Date: 2025-04-25 10:02:38
+ * @LastEditors: rendc
+ * @LastEditTime: 2025-04-27 15:28:58
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tudou{
+            position: relative;
+            width: 233px;
+            height: 155px;
+            background-color: aqua;
+            margin: 30px auto;
+        }
+        .tudou img{
+            width: 100%;
+            height: 100%;
+        }
+        .tudou::before {
+            content: '';
+            /* 隐藏 */
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 233px;
+            height: 100%;
+            background: rgba(0, 0, 0, .4) url(user.png) no-repeat center;
+        }
+        .tudou:hover::before {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="tudou">
+        <img src="pic.png" alt="">
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>走路</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+        .r{
+            position: absolute;
+            width: 92px; /* 原宽度的50% */
+            height: 162.5px; /* 原高度的50%，保持4.53:1的宽高比 */
+            background: url(people.png) no-repeat;
+            background-size: 736px 162.5px; /* 等比例缩小背景图尺寸 */
+            /* 元素可以添加多个动画 用，隔开 */
+            animation: people 1s steps(8) infinite,move 2s forwards;
+            z-index: 1;
+        }
+        .bj{
+            position: absolute;
+            width: 2580px; /* 背景宽度设为200%，以便有移动空间 */
+            height: 1440px; /* 高度占满视口 */
+            background: url(3.png) no-repeat;
+            background-size: cover; /* 覆盖整个容器 */
+            animation: bgMove 10s linear infinite; /* 添加背景移动动画 */
+        }
+        @keyframes people{
+            0%{
+                background-position: 0 0;
+            }
+            100%{
+                background-position: -736px 0;
+            }
+        }
+        @keyframes move{
+            0%{
+                left: 0;
+            }
+            100%{
+                left: 50%;
+                transform: translate(-50%);
+            }
+        }
+        @keyframes bgMove{
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%); /* 向左移动自身宽度的50% */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bj"></div>
+    <div class="r"></div>
+</body>
+</html>

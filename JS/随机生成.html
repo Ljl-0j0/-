@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width: 300px;
+      height: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+  <script>
+    // 随机点名
+
+    // let arr = ['赵云', '黄忠', '关羽','张飞',  '马超', '刘备', '曹操']
+    // // 1.得到一个随机数 作为数组的索引号 这个随机数 0 ~ 6
+    // let random = Math.floor(Math.random() * arr.length)
+    // // 2. 页面输出数组里的元素
+    // document.write(arr[random])
+
+    // // 3. splice(起始位置(下标),删除几个元素)
+    // arr.splice(random, 1)
+    // console.log(arr)
+
+  console.log('----------------------------------------')
+  
+  // // 猜数字游戏
+    // // 1. 随机生成一个数字 1~10
+    // function getRandom(N, M) {
+    //   return Math.floor(Math.random() * (M - N + 1)) + N
+    // }
+    // let random = getRandom(1, 10)
+
+    // // 有限定次数的猜
+    // let flag = true
+    // for (let i = 0; i < 3; i++) {
+    //   let guess = +prompt('请输入一个数字(1 ~ 10)')
+    //   if (guess === random) {
+    //     flag = false
+    //     alert('恭喜你猜对了')
+    //     break
+    //   } else if (guess > random) {
+    //     alert('猜大了，请继续')
+    //   } else {
+    //     alert('猜小了，请继续')
+    //   }
+    //   // if (i === 2) {
+    //   //     alert('次数用完')
+    //   // }
+    // }
+    // if (flag) {
+    //   alert('次数用完，游戏结束')
+    // }
+
+    // // 无数次猜
+
+    // console.log(random)
+    // // 2. 用户输入一个数
+    // let num = +prompt('请输入一个数')
+    // // 3. 判断用户输入的数和随机数是否相等
+    // if (num > random) {
+    //     num = prompt('猜的数字太大了')
+    // } else if (num < random) {
+    //     num = prompt('猜的数字太小了')
+    // }else if (num === random) {
+    //     alert('恭喜你猜对了')
+    //     break
+    // }
+  console.log('----------------------------------------')
+
+  // 随机颜色
+  // 1. 自定义一个随机颜色函数
+  function getRandomColor(flag) {
+    // 3. 如果是true 则返回#ffffff
+    if (flag) {
+      let str = '#'
+      let arr = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f']
+      for (let i = 1; i <= 6; i++) {
+        // 每次随即从数组里抽取一个
+        str += arr[Math.floor(Math.random() * arr.length)]
+        // let random = Math.floor(Math.random() * arr.length)
+        // str += arr[random]
+      }
+      return str
+    } else {    
+      // 4. 否则是false 则返回rgb(255,255,255)
+      let r = Math.floor(Math.random() * 256)
+      let g = Math.floor(Math.random() * 256)
+      let b = Math.floor(Math.random() * 256)
+      return `rgb(${r},${g},${b})`
+    }
+  }
+  // 2. 调用函数 getRandomColor(布尔值)
+  console.log(getRandomColor(false))
+  console.log(getRandomColor(true))
+  console.log(getRandomColor())
+
+
+  const div = document.querySelector('div')
+  div.style.backgroundColor = getRandomColor()
+  </script>
+</body>
+
+</html>

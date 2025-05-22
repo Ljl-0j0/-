@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打字机效果</title>
+    <style>
+        div{
+            overflow: hidden;
+            font-size: 20px;
+            width: 440px;
+            height: 30px;
+            color: white;
+            background-color: blueviolet;
+            /* 强制一行显示所有内容 */
+            white-space: nowrap;
+            animation: w 8s steps(22) infinite;
+        }
+        @keyframes w {
+            0%{
+                width: 0;
+            }
+            100%{
+                width: 440px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>我在这儿等着你回来，等着你回来看那桃花开!</div>
+</body>
+</html>
