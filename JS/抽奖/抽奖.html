@@ -1,0 +1,74 @@
+<!--
+ * @Description: 
+ * @Author: ljl
+ * @Date: 2025-04-25 10:02:38
+ * @LastEditors: rendc
+ * @LastEditTime: 2025-05-22 15:12:09
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .wrapper{
+      width: 840px;
+      height: 420px;
+      background: url(images/bg01.jpg) no-repeat center / cover;
+      padding: 100px 250px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <strong>传智教育年会抽奖</strong>
+    <h1>一等奖：<span id="one">？？？</span></h1>
+    <h3>二等奖：<span id="two">？？？</span></h3>
+    <h5>三等奖：<span id="three">？？？</span></h5>
+  </div>
+  <script>
+    // 1. 声明数组
+    const personArr = ['张三','李四','王五','赵六','小七','小八','小九','小十']
+    // 2. 先抽一等奖
+    // 2.1 随机数
+    const random = Math.floor(Math.random() * personArr.length)
+    // console.log(personArr[random])
+    // 2.2 获取one元素
+    const one = document.querySelector('#one')
+    // 2.3 把名字给one元素
+    one.innerHTML = personArr[random]
+    // 2.4 删除抽中的元素
+    personArr.splice(random,1)
+    // console.log(personArr)
+
+    // 2. 先抽二等奖
+    // 2.1 随机数
+    const random2 = Math.floor(Math.random() * personArr.length)
+    // console.log(personArr[random])
+    // 2.2 获取two元素
+    const two = document.querySelector('#two')
+    // 2.3 把名字给two元素
+    two.innerHTML = personArr[random2]
+    // 2.4 删除抽中的元素
+    personArr.splice(random2,1)
+    // console.log(personArr)
+
+    // 2. 三等奖
+    // 2.1 随机数
+    const random3 = Math.floor(Math.random() * personArr.length)
+    // console.log(personArr[random])
+    // 2.2 获取three元素
+    const three = document.querySelector('#three')
+    // 2.3 把名字给three元素
+    three.innerHTML = personArr[random3]
+    // 2.4 删除抽中的元素
+    personArr.splice(random3,1)
+    console.log(personArr)
+  </script>
+</body>
+
+</html>
