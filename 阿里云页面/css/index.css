@@ -1,0 +1,123 @@
+/* 修改container的最大宽度 1280 根据设计稿来走的 */
+@media screen and (max-width: 1280px){
+  .container{
+    max-width: 1280px;
+  }  
+}
+a{
+  color: #666;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/* header */
+header{
+  padding-left: 0 !important;
+}
+.logo{
+  background-color: #429ad9;
+}
+.logo img{
+  width: 100%;
+}
+.nav{
+  display: block;
+  background-color: #eee;
+  border-bottom: 1px solid #ccc;
+}
+.nav a{
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 30px;
+  font-size: 16px;
+}
+.nav a:hover{
+  background-color: #fff;
+  color: #333;
+}
+.nav a::before{
+  vertical-align: middle;
+  padding-right: 5px;
+}
+
+.news li{
+  float: left;
+  width: 25%;
+  height: 128px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+.news li a{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.news li:nth-child(1){
+  width: 50%;
+  height: 266px;
+}
+.news li:nth-child(1) p{
+  line-height: 41px;
+  font-size: 20px;
+  padding: 0 10px;
+}
+.news li a img{
+  width: 100%;
+  height: 100%;
+}
+.news li a p{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 41px;
+  padding: 5px 10px;
+  background: rgb(0, 0, 0,.5);
+  font-size: 12px;
+  color: #fff;
+  margin-bottom: 0;
+}
+.publish {
+  border-top: 1px solid #ccc;
+}
+
+.publish .row {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.pic {
+  margin-top: 10px;
+}
+
+.pic img {
+  width: 100%;
+}
+
+.banner img {
+  width: 100%;
+}
+
+.hot {
+  display: block;
+  margin-top: 20px;
+  padding: 0 20px 20px;
+  border: 1px solid #ccc;
+}
+
+.hot span {
+  border-radius: 0;
+  margin-bottom: 20px;
+}
+
+.hot p {
+  font-size: 12px;
+}
