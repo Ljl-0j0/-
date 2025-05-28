@@ -1,0 +1,35 @@
+<!--
+ * @Description: 
+ * @Author: ljl
+ * @Date: 2024-12-30 11:19:00
+ * @LastEditors: rendc
+ * @LastEditTime: 2025-05-28 10:23:47
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div data-id="1" data-spm="不知道">1</div>
+  <div data-id="2" data-spm="538">2</div>
+  <div data-id="3">3</div>
+  <div data-id="4">4</div>
+  <div data-id="5">5</div>
+  <script> 
+    const one = document.querySelector('div')
+    console.log(one.dataset.id)  // 1
+    console.log(one.dataset.spm)  // 不知道
+
+    const two = document.querySelector('div[data-id="2"]')
+    console.log(two.dataset.id)  // 2
+    console.log(two.dataset.spm)
+  </script>
+</body>
+
+</html>
