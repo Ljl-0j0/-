@@ -1,0 +1,55 @@
+<!--
+ * @Description: 
+ * @Author: ljl
+ * @Date: 2024-12-30 11:19:00
+ * @LastEditors: rendc
+ * @LastEditTime: 2025-05-29 14:47:33
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .dad {
+      width: 400px;
+      height: 400px;
+      background-color: pink;
+    }
+
+    .baby {
+      width: 200px;
+      height: 200px;
+      background-color: purple;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="dad">
+    <div class="baby"></div>
+  </div>
+  <script>
+    // 获取类名为 dad 的 DOM 元素
+    const dad = document.querySelector('.dad')
+    // 获取类名为 baby 的 DOM 元素
+    const baby = document.querySelector('.baby')
+    // 给 dad 元素添加 mouseenter 事件监听器
+    // 当鼠标进入 dad 元素（包括其子元素）区域时，触发回调函数
+    dad.addEventListener('mouseenter', function () {
+      // 当鼠标进入时，在控制台打印 '鼠标经过'
+      console.log('鼠标经过')
+    })
+    // 给 dad 元素添加 mouseleave 事件监听器
+    // 当鼠标离开 dad 元素（包括其子元素）区域时，触发回调函数
+    dad.addEventListener('mouseleave', function () {
+      // 当鼠标离开时，在控制台打印 '鼠标离开'
+      console.log('鼠标离开')
+    })
+  </script>
+</body>
+
+</html>

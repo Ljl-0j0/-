@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      height: 2000px;
+    }
+
+    div {
+      width: 500px;
+      height: 220px;
+      background-color: pink;
+      margin: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <p>scrollLeft 和 scrollTop；卷去的头部和左侧；配合页面滚动来用 可读写</p>
+    <p>clientWidth 和 clientHeight；获取元素宽度和高度；不包含border，margin 滚动条用于js获取元素大小 只读</p>
+    <p>offsetWidth 和 offsetHeight；获取元素宽度和高度；包含border，margin 滚动条等 只读</p>
+    <p>offsetLeft 和 offsetTop；获取元素距离自己定位父级的左 上距离；获取位置使用 只读</p>
+  </div>
+  <script>
+    const div = document.querySelector('div')
+    // 元素相对于 视口 的位置 
+    console.log(div.getBoundingClientRect())
+  </script>
+</body>
+
+</html>
