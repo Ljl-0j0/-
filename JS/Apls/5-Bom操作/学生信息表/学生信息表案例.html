@@ -145,7 +145,7 @@
       // 2.3 给 arr 数组追加对象 表单获取过来的数据
       arr.push({
         // 处理 stuId：最后一条数据的 stuId + 1
-        stuId: arr.length ? [arr.length - 1].stuId + 1 : 1,
+        stuId: arr.length ? arr[arr.length - 1].stuId + 1 : 1,
         uname: uname.value,
         age: age.value,
         gender: gender.value,
