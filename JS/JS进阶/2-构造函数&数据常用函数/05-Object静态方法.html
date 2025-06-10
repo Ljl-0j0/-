@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const o = { uname: 'pink', age: 18 }
+    const l = { uname: 'll',age: 22}
+    // 1.获得所有的 属性名
+    console.log(Object.keys(o))  //返回数组['uname', 'age']
+    console.log(Object.keys(l))  //返回数组['uname', 'age']
+    // 2. 获得所有的 属性值
+    console.log(Object.values(o))  //  ['pink', 18]
+    console.log(Object.values(l))  //  ['ll', 22]
+    // 3. 对象的拷贝
+    // const oo = {}
+    // Object.assign(拷贝给哪, 被复制的对象)
+    // Object.assign(oo, o)
+    // console.log(oo)
+
+    // assign 添加 / 拷贝
+    Object.assign(o, { gender: '女' })
+    console.log(o)
+  </script>
+</body>
+
+</html>
